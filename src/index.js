@@ -7,6 +7,10 @@ const stringLength = (string) => {
 
 const reverseString = (string) => string.split('').reverse().join('');
 
+const capitalize = (string) => {
+  return string.substring(0, 1).toUpperCase() + string.substring(1);
+};
+
 class Calculator {
   constructor (x, y) {
     this.x = x;
@@ -61,8 +65,7 @@ class Calculator {
 
 
 
-
-
 exports.stringLength = stringLength;
 exports.reverseString = reverseString;
 exports.Calculator = Calculator;
+exports.capitalize = capitalize;
