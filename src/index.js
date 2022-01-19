@@ -7,7 +7,52 @@ const stringLength = (string) => {
 
 const reverseString = (string) => string.split('').reverse().join('');
 
+class Calculator {
+  constructor (a, b) {
+    this.a = a;
+    this.b = b;
+  }
 
+  add() {
+    if (!this.a || !this.b) {
+      throw new Error('Input missing');
+    }
+    if (typeof this.a !== 'number' || typeof this.b !== 'number' ) {
+      throw new Error('Must be number');
+    }
+    return this.a + this.b;
+  };
+
+  subtract() {
+    if (!this.a || !this.b) {
+      throw new Error('Input missing');
+    }
+    if (typeof this.a !== 'number' || typeof this.b !== 'number' ) {
+      throw new Error('Must be number');
+    }
+    return this.a - this.b;
+  }
+
+  divide() {
+    if (!this.a || !this.b) {
+      throw new Error('Input missing');
+    }
+    if (typeof this.a !== 'number' || typeof this.b !== 'number' ) {
+      throw new Error('Must be number');
+    }
+    return this.a / this.b;
+  }
+
+  multiply() {
+    if (!this.a || !this.b) {
+      throw new Error('Input missing');
+    }
+    if (typeof this.a !== 'number' || typeof this.b !== 'number' ) {
+      throw new Error('Must be number');
+    }
+    return this.a * this.b;
+  }
+}
 
 
 
@@ -15,3 +60,4 @@ const reverseString = (string) => string.split('').reverse().join('');
 
 exports.stringLength = stringLength;
 exports.reverseString = reverseString;
+exports.Calculator = Calculator;
