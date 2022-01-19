@@ -8,49 +8,54 @@ const stringLength = (string) => {
 const reverseString = (string) => string.split('').reverse().join('');
 
 class Calculator {
-  constructor (a, b) {
-    this.a = a;
-    this.b = b;
+  constructor (x, y) {
+    this.x = x;
+    this.y = y;
   }
 
   add() {
-    if (!this.a || !this.b) {
+    if (!this.x || !this.y) {
       throw new Error('Input missing');
     }
-    if (typeof this.a !== 'number' || typeof this.b !== 'number' ) {
+    if (typeof this.x !== 'number' || typeof this.y !== 'number' ) {
       throw new Error('Must be number');
     }
-    return this.a + this.b;
+   
+    let sum = 0;
+    const sumArr= [this.x, this.y]
+    const integers = () => sumArr.reduce((total, num) => total + num, 0);
+    sumArr.forEach(n => {if(Number.isInteger(n)) {return integers()}})
+    return sumArr.reduce((total, n) => sum += n * 10, 0) / 10;
   };
 
   subtract() {
-    if (!this.a || !this.b) {
+    if (!this.x || !this.y) {
       throw new Error('Input missing');
     }
-    if (typeof this.a !== 'number' || typeof this.b !== 'number' ) {
+    if (typeof this.x !== 'number' || typeof this.y !== 'number' ) {
       throw new Error('Must be number');
     }
-    return this.a - this.b;
+    return this.x - this.y;
   }
 
   divide() {
-    if (!this.a || !this.b) {
+    if (!this.x || !this.y) {
       throw new Error('Input missing');
     }
-    if (typeof this.a !== 'number' || typeof this.b !== 'number' ) {
+    if (typeof this.x !== 'number' || typeof this.y !== 'number' ) {
       throw new Error('Must be number');
     }
-    return this.a / this.b;
+    return this.x / this.y;
   }
 
   multiply() {
-    if (!this.a || !this.b) {
+    if (!this.x || !this.y) {
       throw new Error('Input missing');
     }
-    if (typeof this.a !== 'number' || typeof this.b !== 'number' ) {
+    if (typeof this.x !== 'number' || typeof this.y !== 'number' ) {
       throw new Error('Must be number');
     }
-    return this.a * this.b;
+    return this.x * this.y;
   }
 }
 
