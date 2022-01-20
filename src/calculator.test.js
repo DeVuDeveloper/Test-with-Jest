@@ -73,7 +73,7 @@ describe('Multiply method', () => {
 
   test('One number is missing', () => {
     const calculator = new Calculator(7);
-    expect(()=> calculator.multiply()).toThrow('Input missing');
+    expect(() => calculator.multiply()).toThrow('Input missing');
   });
 
   test('Both numbers are missing', () => {

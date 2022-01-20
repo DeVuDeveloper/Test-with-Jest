@@ -10,6 +10,6 @@ describe('testing capitalize function', () => {
   });
 
   it('"jest" test', () => {
-     expect(capitalize('jest')).toBe('Jest');
+    expect(capitalize('jest')).toBe('Jest');
   });
 });

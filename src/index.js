@@ -9,7 +9,6 @@ const reverseString = (string) => string.split('').reverse().join('');
 
 const capitalize = (string) => string.substring(0, 1).toUpperCase() + string.substring(1);
 
-
 class Calculator {
   constructor(x, y) {
     this.x = x;
@@ -24,14 +23,14 @@ class Calculator {
       throw new Error('Must be number');
     }
 
-  return (this.x * 10 + this.y * 10) / 10;
+    return (this.x * 10 + this.y * 10) / 10;
   }
- 
+
   subtract() {
     if (!this.x || !this.y) {
       throw new Error('Input missing');
     }
-    if (typeof this.x !== 'number' || typeof this.y !== 'number' ) {
+    if (typeof this.x !== 'number' || typeof this.y !== 'number') {
       throw new Error('Must be number');
     }
     return (this.x * 10 - this.y * 10) / 10;
@@ -51,7 +50,7 @@ class Calculator {
     if (!this.x || !this.y) {
       throw new Error('Input missing');
     }
-    if (typeof this.x !== 'number' || typeof this.y !== 'number' ) {
+    if (typeof this.x !== 'number' || typeof this.y !== 'number') {
       throw new Error('Must be number');
     }
     return this.x * this.y;
