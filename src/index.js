@@ -24,17 +24,9 @@ class Calculator {
       throw new Error('Must be number');
     }
 
-    let sum = 0;
-    const sumArr = [this.x, this.y];
-    const integers = () => sumArr.reduce((total, num) => total + num, 0);
-    sumArr.forEach((n) => {
-      if (Number.isInteger(n)) {
-        return integers();
-      }
-    })
-    return sumArr.reduce((total, n) => sum += n * 10, 0) / 10;
+  return (this.x * 10 + this.y * 10) / 10;
   }
-
+ 
   subtract() {
     if (!this.x || !this.y) {
       throw new Error('Input missing');
@@ -42,7 +34,7 @@ class Calculator {
     if (typeof this.x !== 'number' || typeof this.y !== 'number' ) {
       throw new Error('Must be number');
     }
-    return this.x - this.y;
+    return (this.x * 10 - this.y * 10) / 10;
   }
 
   divide() {

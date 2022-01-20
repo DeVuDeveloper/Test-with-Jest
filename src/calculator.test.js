@@ -25,7 +25,7 @@ describe('add method', () => {
 describe('Subtract method', () => {
   test('is subtracting 2 numbers', () => {
     const calculator = new Calculator(3, 2.7);
-    expect(calculator.subtract()).toBeCloseTo(0.3);
+    expect(calculator.subtract()).toBe(0.3);
   });
 
   test('One number is missing', () => {
