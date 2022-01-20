@@ -1,6 +1,6 @@
-const { reverseString }= require('./index.js');
+const { reverseString } = require('./index');
 
 it('Reverse string', () => {
-  expect(reverseString("Dejan")).toBe('najeD');
-  expect(reverseString("Microverse")).toBe('esrevorciM');
+  expect(reverseString('Dejan')).toBe('najeD');
+  expect(reverseString('Microverse')).toBe('esrevorciM');
 });
