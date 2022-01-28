@@ -16,10 +16,10 @@ Project is created with:
 
 ## Setup
 To run this project, install it locally using:
-$ cd Desktop
-$ git clone https://github.com/VuDej/Test-with-Jest.git
-$ npm install --save-dev jest
-$ npm test
+* cd Desktop
+* git clone https://github.com/VuDej/Test-with-Jest.git
+* npm install --save-dev jest
+* npm test
 
 ## Author
 
